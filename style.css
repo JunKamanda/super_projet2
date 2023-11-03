@@ -1,0 +1,129 @@
+@font-face{
+    src: url(fonts/);
+    font-family: WindSong;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-family: WindSong;
+}
+
+.container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(151, 149, 149);
+}
+
+.container::before{
+    content: "DarkJrKam's";
+    display: block;
+    background-color: rgb(32, 26, 28);
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(6, 41, 87);
+    width: 0%;
+    height: 5px;
+    transition: 3s all ease;
+}
+
+.container:hover::after{
+    content: 'Container';
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container .div{
+    position: absolute;
+    width: 500PX;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 2px rgb(29, 12, 9);
+    margin-top: 100px;
+}
+
+.container .div::after{
+    position: absolute;
+    content: '';
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 5px;
+    transition: 1s all ease;
+}
+
+.un{
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    z-index: 10;
+    background-image:linear-gradient(to right, rgb(90, 47, 47),rgb(83, 58, 58));
+}
+
+.container .div.un:hover::after{
+    content: 'The First';
+    width: 100%;
+    transition: 1s all ease;
+    text-align: center;
+    background-color: rgb(3, 39, 3);
+    font-size: 20px;
+}
+
+.deux{
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    z-index: 9;
+    background-image:linear-gradient(to right, rgb(114, 39, 39),rgb(24, 7, 7));
+}
+
+.container .div.deux::after{
+    margin-top: -40px;
+}
+
+.container .div.deux:hover::after{
+    content: 'The Second';
+    width: 100%;
+    transition: 1s all ease;
+    text-align: center;
+    background-color: rgb(70, 39, 15);
+    font-size: 20px;
+}
+
+
+.trois{
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    z-index: 8;
+    background-image:linear-gradient(to right, rgb(255, 155, 155),rgb(105, 18, 18));
+}
+
+.container .div.trois::after{
+    margin-top: -40px;
+}
+.container .div.trois:hover::after{
+    content: 'The Third';
+    width: 100%;
+    transition: 1s all ease;
+    text-align: center;
+    background-color: rgb(48, 18, 10);
+    font-size: 20px;
+}
